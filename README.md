@@ -40,6 +40,9 @@
 
 ### 软件截图
 
+<img width="1501" height="915" alt="image" src="https://github.com/user-attachments/assets/50c4fd47-3ec9-44b4-a202-ff29bdc308e0" />
+
+
 ### 基础功能 
 
 ## 相关技术
