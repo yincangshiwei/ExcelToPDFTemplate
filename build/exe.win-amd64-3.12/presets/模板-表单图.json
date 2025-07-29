@@ -1,0 +1,59 @@
+{
+  "excel_path": "C:/Users/yhadmin/Desktop/12609包材指引.xlsx",
+  "pdf_template_path": "C:/Users/yhadmin/Desktop/模板图-表单1.pdf",
+  "output_folder": "C:/Users/yhadmin/Desktop/test",
+  "sheet_name": "明细表",
+  "title_row": 3,
+  "start_row": 4,
+  "field_mapping": {
+    "PO": {
+      "is_excel_col": true,
+      "is_excel_image": false,
+      "val": "B"
+    },
+    "CODIGO": {
+      "is_excel_col": true,
+      "is_excel_image": false,
+      "val": "F"
+    },
+    "ARTICLE": {
+      "is_excel_col": true,
+      "is_excel_image": false,
+      "val": "G"
+    },
+    "MODELO": {
+      "is_excel_col": true,
+      "is_excel_image": false,
+      "val": "J"
+    },
+    "PESO BRUTO": {
+      "is_excel_col": false,
+      "is_excel_image": false,
+      "val": "      KGS"
+    },
+    "DIMENSIONES": {
+      "is_excel_col": false,
+      "is_excel_image": false,
+      "val": "   X  X   MM"
+    },
+    "CONTENIDO": {
+      "is_excel_col": true,
+      "is_excel_image": false,
+      "val": "L"
+    },
+    "FRAGILE": {
+      "is_excel_col": false,
+      "is_excel_image": false,
+      "val": "外箱标：5.08*2.54CM"
+    },
+    "Image": {
+      "is_excel_col": false,
+      "is_excel_image": true,
+      "val": "N"
+    }
+  },
+  "col_separator": " ",
+  "flatten_form": false,
+  "output_png": true,
+  "output_ppt": true
+}
