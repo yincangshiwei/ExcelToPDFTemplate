@@ -247,7 +247,13 @@ class ExcelToPDFProcessor:
             
             # 保存文档
             if flatten_form:
-                doc.save(output_pdf_path, deflate=True, clean=True)
+                # 扁平化表单：将表单字段转换为静态文本
+                self.logger.debug("正在扁平化表单...")
+                pdfbytes = doc.convert_to_pdf()  # 这会扁平化所有表单字段
+                flattened_doc = fitz.open("pdf", pdfbytes)
+                flattened_doc.save(output_pdf_path, deflate=True, clean=True)
+                flattened_doc.close()
+                self.logger.debug("表单扁平化完成")
             else:
                 doc.save(output_pdf_path, incremental=False, encryption=fitz.PDF_ENCRYPT_NONE)
             

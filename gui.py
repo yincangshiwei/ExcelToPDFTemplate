@@ -39,7 +39,7 @@ class ExcelToPDFGUI:
         self.title_row_var = tk.IntVar(value=3)
         self.start_row_var = tk.IntVar(value=4)
         self.filename_column_var = tk.StringVar()  # 新增：文件名指定列
-        self.flatten_form_var = tk.BooleanVar(value=False)
+        self.flatten_form_var = tk.BooleanVar(value=True)
         self.output_png_var = tk.BooleanVar(value=False)
         self.output_ppt_var = tk.BooleanVar(value=False)
         
