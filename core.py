@@ -25,7 +25,7 @@ class ExcelToPDFProcessor:
         self.filename_column = None  # 新增：文件名指定列
         self.field_mapping = {}
         self.col_separator = " "
-        self.flatten_form = False
+        self.flatten_form = True
         self.output_png = False
         self.output_ppt = False
         
@@ -654,7 +654,7 @@ class ExcelToPDFProcessor:
         self.filename_column = None  # 新增：文件名列重置
         self.field_mapping = {}
         self.col_separator = " "
-        self.flatten_form = False
+        self.flatten_form = True
         self.output_png = False
         self.output_ppt = False
         
