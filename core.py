@@ -262,13 +262,20 @@ class ExcelToPDFProcessor:
             
             # 保存文档
             if flatten_form:
-                # 扁平化表单：将表单字段转换为静态文本
+                # 扁平化表单：优先使用 convert_to_pdf；失败时回退为“栅格化扁平化”（将整页渲染为图片）
                 self.logger.debug("正在扁平化表单...")
-                pdfbytes = doc.convert_to_pdf()  # 这会扁平化所有表单字段
-                flattened_doc = fitz.open("pdf", pdfbytes)
-                flattened_doc.save(output_pdf_path, deflate=True, clean=True)
-                flattened_doc.close()
-                self.logger.debug("表单扁平化完成")
+                try:
+                    pdfbytes = doc.convert_to_pdf()  # 这会扁平化所有表单字段
+                    flattened_doc = fitz.open("pdf", pdfbytes)
+                    flattened_doc.save(output_pdf_path, deflate=True, clean=True)
+                    flattened_doc.close()
+                    self.logger.debug("表单扁平化完成")
+                except Exception as e:
+                    self.logger.error(f"convert_to_pdf 扁平化失败，启用栅格化备用方案: {e}")
+                    self.log_to_gui("扁平化处理", "warning", f"标准扁平化失败，启用栅格化备用方案: {str(e)[:50]}...")
+                    # 注意：该方式会生成不可编辑、不可检索的图像PDF，但能彻底避免字体替代错误
+                    self.rasterize_flatten_doc(doc, output_pdf_path, dpi=200)
+                    self.log_to_gui("扁平化处理", "info", "栅格化扁平化完成（图像PDF，不可编辑）")
             else:
                 doc.save(output_pdf_path, incremental=False, encryption=fitz.PDF_ENCRYPT_NONE)
             
@@ -679,6 +686,27 @@ class ExcelToPDFProcessor:
     def get_desktop_path(self):
         """获取桌面路径"""
         return str(Path.home() / "Desktop")
+    
+    def rasterize_flatten_doc(self, doc, output_pdf_path, dpi=200):
+        """将PDF以指定DPI栅格化后重新封装为不可编辑的图像PDF，避免字体替代问题"""
+        try:
+            zoom = dpi / 72.0  # 72pt = 1英寸
+            mat = fitz.Matrix(zoom, zoom)
+            new_doc = fitz.open()
+            for page in doc:
+                # 渲染为位图
+                pix = page.get_pixmap(matrix=mat, alpha=False)
+                # 新建与原页面同尺寸的页面（以pt为单位）
+                new_page = new_doc.new_page(width=page.rect.width, height=page.rect.height)
+                # 将渲染得到的图片铺满页面
+                new_page.insert_image(new_page.rect, pixmap=pix)
+            # 保存图像PDF
+            new_doc.save(output_pdf_path, deflate=True, clean=True)
+            new_doc.close()
+            self.logger.debug(f"栅格化扁平化完成: {output_pdf_path}")
+        except Exception as e:
+            self.logger.error(f"栅格化扁平化失败: {e}")
+            raise
     
     def convert_pdf_to_png(self, pdf_path, output_folder):
         """将PDF转换为PNG图片"""
