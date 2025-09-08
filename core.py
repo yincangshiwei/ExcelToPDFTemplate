@@ -236,7 +236,22 @@ class ExcelToPDFProcessor:
                                     pass
                             
                             filled_count += 1
-                            self.logger.debug(f"成功填充字段 '{field_name}': 原始值='{value}', 最终值='{widget.field_value}'")
+                            
+                            # 获取字段的字体信息
+                            font_name = "未知"
+                            font_size = "未知"
+                            try:
+                                # 尝试获取字段的字体信息
+                                if hasattr(widget, 'text_font'):
+                                    font_name = widget.text_font or "默认字体"
+                                if hasattr(widget, 'text_fontsize'):
+                                    font_size = f"{widget.text_fontsize}pt" if widget.text_fontsize else "默认大小"
+                                elif hasattr(widget, 'fontsize'):
+                                    font_size = f"{widget.fontsize}pt" if widget.fontsize else "默认大小"
+                            except Exception as font_e:
+                                self.logger.debug(f"获取字段 '{field_name}' 字体信息失败: {font_e}")
+                            
+                            self.logger.debug(f"成功填充字段 '{field_name}': 原始值='{value}', 最终值='{widget.field_value}', 字体='{font_name}', 字体大小='{font_size}'")
                         except Exception as e:
                             error_msg = f"填充字段 '{field_name}' 失败: {e}"
                             self.logger.error(error_msg)
