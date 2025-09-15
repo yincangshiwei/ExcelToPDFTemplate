@@ -990,6 +990,11 @@ class ExcelToPDFProcessor:
     def create_ppt_from_pdfs(self, pdf_paths, output_folder):
         """将多个PDF文件合并为一个PPT文件"""
         try:
+            # 临时增加PIL的图像大小限制
+            from PIL import Image
+            original_max_image_pixels = Image.MAX_IMAGE_PIXELS
+            Image.MAX_IMAGE_PIXELS = None  # 临时移除限制
+            
             # 创建PPT演示文稿
             prs = Presentation()
             
@@ -1005,12 +1010,36 @@ class ExcelToPDFProcessor:
                     # 获取第一页
                     page = pdf_doc[0]
                     
-                    # 设置缩放比例
-                    zoom = 2.0
+                    # 获取页面尺寸
+                    page_rect = page.rect
+                    page_width = page_rect.width
+                    page_height = page_rect.height
+                    
+                    # 计算安全的缩放比例，避免生成过大的图像
+                    # 限制最大像素数为150M像素（约为PIL默认限制的85%）
+                    max_pixels = 150_000_000
+                    current_pixels = page_width * page_height
+                    
+                    if current_pixels > 0:
+                        max_zoom = (max_pixels / current_pixels) ** 0.5
+                        # 选择较小的缩放比例，但至少为0.5以保证质量
+                        zoom = min(2.0, max(0.5, max_zoom))
+                    else:
+                        zoom = 1.0
+                    
+                    self.logger.info(f"PDF页面尺寸: {page_width:.1f}x{page_height:.1f}, 使用缩放比例: {zoom:.2f}")
+                    
                     mat = fitz.Matrix(zoom, zoom)
                     
                     # 渲染页面为图片
                     pix = page.get_pixmap(matrix=mat)
+                    
+                    # 检查生成的图像尺寸
+                    img_width = pix.width
+                    img_height = pix.height
+                    total_pixels = img_width * img_height
+                    
+                    self.logger.info(f"生成图像尺寸: {img_width}x{img_height}, 总像素数: {total_pixels:,}")
                     
                     # 将图片数据转换为PIL Image
                     img_data = pix.tobytes("png")
@@ -1037,9 +1066,16 @@ class ExcelToPDFProcessor:
                     
                     pdf_doc.close()
                     
+                    self.logger.info(f"成功处理PDF文件: {Path(pdf_path).name}")
+                    
                 except Exception as e:
-                    self.logger.warning(f"处理PDF文件 {pdf_path} 时出错: {str(e)}")
+                    error_msg = f"处理PDF文件 {pdf_path} 时出错: {str(e)}"
+                    self.logger.warning(error_msg)
+                    self.log_to_gui("PPT处理", "warning", f"跳过文件 {Path(pdf_path).name}: {str(e)[:50]}...")
                     continue
+            
+            # 恢复PIL的原始限制
+            Image.MAX_IMAGE_PIXELS = original_max_image_pixels
             
             # 保存PPT文件
             ppt_path = os.path.join(output_folder, "merged_pdfs.pptx")
@@ -1051,6 +1087,13 @@ class ExcelToPDFProcessor:
             return ppt_path
             
         except Exception as e:
+            # 确保恢复PIL的原始限制
+            try:
+                from PIL import Image
+                Image.MAX_IMAGE_PIXELS = original_max_image_pixels
+            except:
+                pass
+            
             error_msg = f"创建PPT失败: {str(e)}"
             self.logger.error(error_msg)
             self.log_to_gui("创建PPT", "error", error_msg)
