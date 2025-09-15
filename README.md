@@ -16,7 +16,8 @@
 - **图片支持**：支持WPS的DISPIMG图片和Office的浮动图片
 - **批量处理**：支持批量处理多行数据生成多个PDF文件
 - **格式转换**：支持将生成的PDF转换为PNG图片或PPT演示文稿
-
+- **字体管理**：支持自行选择和上传字体，用于处理扁平化表单字体
+  
 ### 图片提取功能
 
 #### 支持的图片格式
@@ -40,7 +41,8 @@
 
 ### 软件截图
 
-<img width="1501" height="915" alt="image" src="https://github.com/user-attachments/assets/50c4fd47-3ec9-44b4-a202-ff29bdc308e0" />
+<img width="1519" height="923" alt="image" src="https://github.com/user-attachments/assets/e369c65a-2b63-4423-86e1-7069236b2e81" />
+
 
 
 ### 基础功能 
@@ -65,7 +67,7 @@ ExcelToPDFTemplate/
 ├── GUIDGen.py               # GUID生成工具
 ├── setup.py                 # 打包脚本
 ├── requirements.txt         # 依赖项列表
-├── test_image_extraction.py # 图片提取测试脚本
+├── font_manager.py          # 字体管理
 ├── README.md               # 项目说明文档
 ├── presets/                # 预设配置目录
 │   ├── 模板-表单.json
