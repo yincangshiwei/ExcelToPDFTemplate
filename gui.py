@@ -17,10 +17,10 @@ class ExcelToPDFGUI:
 
     def __init__(self):
         # 企业环境检测
-        if not ExcelToPDFGUI._network_checked:
-            ExcelToPDFGUI._network_checked = True
-            if not self.check_network_connection():
-                return
+        # if not ExcelToPDFGUI._network_checked:
+        #     ExcelToPDFGUI._network_checked = True
+        #     if not self.check_network_connection():
+        #         return
         # 创建主窗口
         self.root = ThemedTk(theme="arc")
         self.root.title("Excel转PDF模板（套打-电子签）")
