@@ -1,0 +1,732 @@
+2025-09-12 15:35:33 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 15:35:33 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 15:35:33 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:10:34 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 16:10:34 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:10:34 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:13:01 - ExcelToPDFProcessor - INFO - 用户选择保存预设文件: I:/dev_works/PycharmProjects/MyProject/ToolProject/ExcelToPDFTemplate/presets/test.json
+2025-09-12 16:13:01 - ExcelToPDFProcessor - INFO - 开始保存预设配置到: I:/dev_works/PycharmProjects/MyProject/ToolProject/ExcelToPDFTemplate/presets/test.json
+2025-09-12 16:13:01 - ExcelToPDFProcessor - INFO - 预设配置保存成功: I:/dev_works/PycharmProjects/MyProject/ToolProject/ExcelToPDFTemplate/presets/test.json
+2025-09-12 16:16:13 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 16:16:13 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:16:13 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:16:45 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 16:16:45 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:16:45 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:16:51 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 16:16:51 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:16:51 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:17:13 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:17:13 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:18:26 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 16:18:26 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:18:26 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 16:18:47 - ExcelToPDFProcessor - INFO - 用户选择Excel文件: C:/Users/yhadmin/Desktop/2A25EGW6213-EG01-包材指引.xlsx
+2025-09-12 16:18:50 - ExcelToPDFProcessor - INFO - 用户选择PDF模板文件: C:/Users/yhadmin/Desktop/Coppel 箱唛.pdf
+2025-09-12 16:18:53 - ExcelToPDFProcessor - INFO - 用户选择输出目录: C:/Users/yhadmin/Desktop/包材
+2025-09-12 16:18:54 - ExcelToPDFProcessor - INFO - 用户开始加载PDF表单字段: C:/Users/yhadmin/Desktop/Coppel 箱唛.pdf
+2025-09-12 16:18:54 - ExcelToPDFProcessor - INFO - 开始获取PDF表单字段: C:/Users/yhadmin/Desktop/Coppel 箱唛.pdf
+2025-09-12 16:18:54 - ExcelToPDFProcessor - INFO - 成功获取到 5 个PDF表单字段: ['PO', '客户货号', '货描', '系列名', '外箱装量']
+2025-09-12 16:18:54 - ExcelToPDFProcessor - INFO - PDF字段加载成功: 成功加载了 5 个表单字段
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 用户开始处理Excel转PDF任务
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 开始处理Excel转PDF任务
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - Excel文件: C:/Users/yhadmin/Desktop/2A25EGW6213-EG01-包材指引.xlsx
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - PDF模板: C:/Users/yhadmin/Desktop/Coppel 箱唛.pdf
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 输出目录: C:/Users/yhadmin/Desktop/包材
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 配置参数: 表头行=3, 数据起始行=4, 扁平化=True
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 输出目录已创建: C:/Users/yhadmin/Desktop/包材
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 读取Excel sheet: 第一个sheet
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - Excel数据读取完成，总行数: 12
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 开始获取PDF表单字段: C:/Users/yhadmin/Desktop/Coppel 箱唛.pdf
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 成功获取到 5 个PDF表单字段: ['PO', '客户货号', '货描', '系列名', '外箱装量']
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 开始处理数据，共 9 行
+2025-09-12 16:19:05 - ExcelToPDFProcessor - INFO - 开始处理第 4 行数据 (数据行 1/9)
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 第 4 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\1.pdf
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:05 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\1.pdf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\1.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - 第 4 行处理成功 → 1.pdf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - INFO - 开始处理第 5 行数据 (数据行 2/9)
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 第 5 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\2.pdf
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:06 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\2.pdf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\2.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - 第 5 行处理成功 → 2.pdf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - 开始处理第 6 行数据 (数据行 3/9)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 第 6 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\3.pdf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:07 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\3.pdf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\3.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - 第 6 行处理成功 → 3.pdf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - 开始处理第 7 行数据 (数据行 4/9)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 第 7 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\4.pdf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:08 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\4.pdf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\4.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - 第 7 行处理成功 → 4.pdf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - 开始处理第 8 行数据 (数据行 5/9)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 第 8 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\5.pdf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\5.pdf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\5.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - 第 8 行处理成功 → 5.pdf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - INFO - 开始处理第 9 行数据 (数据行 6/9)
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 第 9 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\6.pdf
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:09 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\6.pdf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\6.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - 第 9 行处理成功 → 6.pdf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - 开始处理第 10 行数据 (数据行 7/9)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 第 10 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\7.pdf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:10 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\7.pdf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\7.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - 第 10 行处理成功 → 7.pdf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - 开始处理第 11 行数据 (数据行 8/9)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 第 11 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\8.pdf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:11 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\8.pdf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\8.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - 第 11 行处理成功 → 8.pdf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - 开始处理第 12 行数据 (数据行 9/9)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 第 12 行字段映射详情: PO=M→'735439'; 客户货号=自定义值→'CODIGO'
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 开始填充PDF表单: C:/Users/yhadmin/Desktop/包材\9.pdf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 填充数据: {'PO': '735439', '客户货号': 'CODIGO'}
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 准备处理字段 'PO': 值='735439'
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 准备处理字段 '客户货号': 值='CODIGO'
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 正在扁平化表单...
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 字体嵌入成功: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1396.5)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.135986328125, 1367.9501953125, 1072.6600341796875, 1406.9501953125)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(894.1, 1440.1)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(894.114013671875, 1412.93017578125, 1084.6500244140625, 1449.35009765625)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='735439', 包含中文=False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 'PO' 字体应用详情 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   填充内容: '735439' (长度: 6)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3306.4, 1396.2)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3306.449951171875, 1368.4501953125, 3505.97998046875, 1405.9501953125)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 'PO' 处理完成 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 字体路径选择: 文本='CODIGO', 包含中文=False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   尝试默认字体 'calibri': 路径=resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG -   ✓ 使用默认字体: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 字体应用详情 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   填充内容: 'CODIGO' (长度: 6)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   包含中文: False
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的默认字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   用户选择的中文字体: simhei
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   本次应该使用的字体: calibri
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字体文件路径: resources/fonts\default\calibri.ttf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   表单域字体大小: 36.0pt
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 使用已嵌入字体: calibri.ttf -> fontname=CustomFont_0
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   ✓ 文本插入成功: 字号=36.0pt, 位置=(3308.0, 1438.5)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO -   字段矩形: Rect(3307.9599609375, 1409.93017578125, 3490.989990234375, 1449.1201171875)
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - === 字段 '客户货号' 处理完成 ===
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - insert_text扁平化完成: C:/Users/yhadmin/Desktop/包材\9.pdf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - DEBUG - 表单扁平化完成
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - PDF填充完成: C:/Users/yhadmin/Desktop/包材\9.pdf, 成功填充了 4 个字段
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - 第 12 行处理成功 → 9.pdf
+2025-09-12 16:19:12 - ExcelToPDFProcessor - INFO - 处理完成 - 总行数: 9, 成功: 9, 失败: 0
+2025-09-12 16:19:16 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\1.png
+2025-09-12 16:19:20 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\2.png
+2025-09-12 16:19:23 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\3.png
+2025-09-12 16:19:27 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\4.png
+2025-09-12 16:19:30 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\5.png
+2025-09-12 16:19:34 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\6.png
+2025-09-12 16:19:37 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\7.png
+2025-09-12 16:19:40 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\8.png
+2025-09-12 16:19:44 - ExcelToPDFProcessor - INFO - PDF转PNG成功: C:/Users/yhadmin/Desktop/包材\9.png
+2025-09-12 16:19:48 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\1.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:19:51 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\2.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:19:55 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\3.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:19:58 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\4.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:20:02 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\5.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:20:05 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\6.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:20:08 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\7.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:20:12 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\8.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:20:16 - ExcelToPDFProcessor - WARNING - 处理PDF文件 C:/Users/yhadmin/Desktop/包材\9.pdf 时出错: Image size (205712138 pixels) exceeds limit of 178956970 pixels, could be decompression bomb DOS attack.
+2025-09-12 16:20:16 - ExcelToPDFProcessor - INFO - PPT创建成功: C:/Users/yhadmin/Desktop/包材\merged_pdfs.pptx
+2025-09-12 16:20:16 - ExcelToPDFProcessor - INFO - 处理任务完成 - 成功: 9, 失败: 0
+2025-09-12 17:15:59 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 17:15:59 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 17:15:59 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 17:17:54 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 17:17:54 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 17:17:54 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 17:18:32 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 17:18:32 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 17:18:32 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 17:19:53 - ExcelToPDFProcessor - INFO - 日志系统初始化完成
+2025-09-12 17:19:53 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个
+2025-09-12 17:19:53 - ExcelToPDFProcessor - INFO - 加载字体库完成，默认字体: 2个，中文字体: 1个

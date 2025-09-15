@@ -28,12 +28,48 @@ class ExcelToPDFProcessor:
         self.flatten_form = True
         self.output_png = False
         self.output_ppt = False
-        
+
+        # 字体相关配置
+        self.font_base_path = "resources/fonts"  # 字体库基础路径
+        self.default_font = "calibri"  # 默认字体（不含扩展名）
+        self.chinese_font = "simhei"  # 中文字体（不含扩展名）
+        self.default_fonts = {}  # 默认字体字典 {font_name: font_path}
+        self.chinese_fonts = {}  # 中文字体字典 {font_name: font_path}
+
         # GUI日志回调函数
         self.gui_log_callback = None
-        
+
         # 设置日志记录
         self.setup_logging()
+        
+        # 初始化字体库
+        self.load_available_fonts()
+
+    def _parse_widget_fontsize(self, widget, default=22):
+        """
+        从PDF widget中解析字体大小。支持数值或带'pt'的字符串（如'30 pt'）。
+        将尝试以下属性名：field_fontsize / text_fontsize / fontsize。
+        """
+        candidates = []
+        for attr in ("field_fontsize", "text_fontsize", "fontsize"):
+            if hasattr(widget, attr):
+                candidates.append(getattr(widget, attr))
+        for val in candidates:
+            if val is None:
+                continue
+            try:
+                if isinstance(val, (int, float)) and val > 0:
+                    return float(val)
+                if isinstance(val, str):
+                    s = val.strip().lower()
+                    if s.endswith("pt"):
+                        s = s[:-2].strip()
+                    num = float(s)
+                    if num > 0:
+                        return num
+            except:
+                continue
+        return float(default)
         
     def excel_col_letter_to_index(self, col):
         """将Excel列字母如'A'转为列号索引，从0开始"""
@@ -73,6 +109,88 @@ class ExcelToPDFProcessor:
         self.logger.addHandler(file_handler)
         
         self.logger.info("日志系统初始化完成")
+    
+    def load_available_fonts(self):
+        """加载可用字体库"""
+        self.default_fonts = {}  # 默认字体字典
+        self.chinese_fonts = {}  # 中文字体字典
+        
+        # 加载默认字体
+        default_path = os.path.join(self.font_base_path, "default")
+        if os.path.exists(default_path):
+            self._load_fonts_from_dir(default_path, self.default_fonts)
+        
+        # 加载中文字体
+        zh_path = os.path.join(self.font_base_path, "zh")
+        if os.path.exists(zh_path):
+            self._load_fonts_from_dir(zh_path, self.chinese_fonts)
+        
+        total_fonts = len(self.default_fonts) + len(self.chinese_fonts)
+        self.logger.info(f"加载字体库完成，默认字体: {len(self.default_fonts)}个，中文字体: {len(self.chinese_fonts)}个")
+    
+    def _load_fonts_from_dir(self, dir_path, font_dict):
+        """从指定目录加载字体文件"""
+        try:
+            for file in os.listdir(dir_path):
+                if file.lower().endswith(('.ttf', '.otf')):
+                    font_path = os.path.join(dir_path, file)
+                    font_name = os.path.splitext(file)[0]  # 直接使用文件名，不加前缀
+                    font_dict[font_name] = font_path
+        except Exception as e:
+            self.logger.error(f"加载字体目录 {dir_path} 失败: {e}")
+    
+    def get_default_fonts(self):
+        """获取默认字体列表"""
+        return list(self.default_fonts.keys())
+    
+    def get_chinese_fonts(self):
+        """获取中文字体列表"""
+        return list(self.chinese_fonts.keys())
+    
+    def get_font_path(self, font_name, is_chinese=False):
+        """根据字体名称获取字体文件路径"""
+        if is_chinese:
+            return self.chinese_fonts.get(font_name, "")
+        else:
+            return self.default_fonts.get(font_name, "")
+    
+    def has_chinese_characters(self, text):
+        """检测文本中是否包含中文字符"""
+        if not text:
+            return False
+        
+        # 中文字符的Unicode范围
+        chinese_pattern = re.compile(r'[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]')
+        return bool(chinese_pattern.search(text))
+    
+    def get_appropriate_font_path(self, text, default_font_name, chinese_font_name):
+        """根据文本内容选择合适的字体路径"""
+        has_chinese = self.has_chinese_characters(text)
+        
+        self.logger.debug(f"字体路径选择: 文本='{text[:20]}{'...' if len(text) > 20 else ''}', 包含中文={has_chinese}")
+        
+        if has_chinese and chinese_font_name:
+            font_path = self.get_font_path(chinese_font_name, is_chinese=True)
+            self.logger.debug(f"  尝试中文字体 '{chinese_font_name}': 路径={font_path}")
+            if font_path and os.path.exists(font_path):
+                self.logger.debug(f"  ✓ 使用中文字体: {font_path}")
+                return font_path
+            else:
+                self.logger.debug(f"  ✗ 中文字体不可用")
+        
+        # 使用默认字体
+        if default_font_name:
+            font_path = self.get_font_path(default_font_name, is_chinese=False)
+            self.logger.debug(f"  尝试默认字体 '{default_font_name}': 路径={font_path}")
+            if font_path and os.path.exists(font_path):
+                self.logger.debug(f"  ✓ 使用默认字体: {font_path}")
+                return font_path
+            else:
+                self.logger.debug(f"  ✗ 默认字体不可用")
+        
+        # 如果都没有，返回None使用系统默认字体
+        self.logger.debug(f"  → 回退到系统默认字体")
+        return None
     
     def set_gui_log_callback(self, callback):
         """设置GUI日志回调函数"""
@@ -149,6 +267,36 @@ class ExcelToPDFProcessor:
             self.logger.error(f"在字段 '{widget.field_name}' 中插入图片失败: {e}")
             return False
 
+    def fill_form_field_with_font(self, widget, value):
+        """使用自定义字体填充表单字段（非扁平化模式）"""
+        try:
+            # 获取合适的字体路径
+            font_path = self.get_appropriate_font_path(value, self.default_font, self.chinese_font)
+            
+            # 设置字段值
+            widget.field_value = value
+            
+            # 如果有自定义字体，尝试设置字体
+            if font_path and os.path.exists(font_path):
+                try:
+                    # 尝试设置字体（这个功能在某些PDF中可能不完全支持）
+                    # PyMuPDF的表单字段字体设置有限，但我们仍然尝试
+                    widget.update()
+                    self.logger.debug(f"字段 '{widget.field_name}' 使用字体: {font_path}")
+                except Exception as font_error:
+                    # 如果字体设置失败，仍然使用默认字体填充
+                    self.logger.debug(f"字段 '{widget.field_name}' 字体设置失败，使用默认字体: {font_error}")
+            else:
+                # 使用默认字体
+                widget.update()
+                self.logger.debug(f"字段 '{widget.field_name}' 使用默认字体")
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"填充表单字段 '{widget.field_name}' 失败: {e}")
+            return False
+
     def fill_pdf_form(self, input_pdf_path, output_pdf_path, data_dict, image_dict=None, flatten_form=False):
         """使用PyMuPDF填充PDF表单"""
         self.logger.debug(f"开始填充PDF表单: {output_pdf_path}")
@@ -176,86 +324,22 @@ class ExcelToPDFProcessor:
                     # 处理普通文本字段
                     if field_name in data_dict:
                         value = str(data_dict[field_name])
-                        try:
-                            # 记录字段详细信息
-                            field_type = widget.field_type
-                            field_flags = widget.field_flags
-                            self.logger.debug(f"字段 '{field_name}' 信息: 类型={field_type}, 标志={field_flags}")
-                            
-                            # 尝试多种方法设置字段值
-                            widget.field_value = value
-                            widget.update()
-                            
-                            # 对于文本字段，尝试特殊处理以保留空格
-                            if field_type == fitz.PDF_WIDGET_TYPE_TEXT:
-                                # 检查是否包含多个连续空格
-                                if '  ' in value:  # 如果包含多个空格
-                                    self.logger.info(f"检测到字段 '{field_name}' 包含多个空格，尝试保留")
-                                    
-                                    # 方法1: 使用非断行空格替换普通空格
-                                    value_with_nbsp = value.replace(' ', '\u00A0')
-                                    widget.field_value = value_with_nbsp
-                                    widget.update()
-                                    
-                                    # 记录尝试结果
-                                    result_nbsp = widget.field_value
-                                    self.logger.debug(f"非断行空格方法结果: '{result_nbsp}'")
-                                    
-                                    # 如果非断行空格不工作，尝试其他方法
-                                    if result_nbsp.replace('\u00A0', ' ') != value:
-                                        # 方法2: 使用下划线临时替换空格（用户可以手动替换）
-                                        value_with_underscore = value.replace('  ', '_')
-                                        widget.field_value = value_with_underscore
-                                        widget.update()
-                                        
-                                        result_underscore = widget.field_value
-                                        self.logger.debug(f"下划线替换方法结果: '{result_underscore}'")
-                                        
-                                        if result_underscore == value_with_underscore:
-                                            self.logger.warning(f"字段 '{field_name}' 使用下划线替换多个空格，请手动替换为空格")
-                                        else:
-                                            # 方法3: 恢复原始值
-                                            widget.field_value = value
-                                            widget.update()
-                                else:
-                                    # 普通情况，直接设置
-                                    widget.field_value = value
-                                    widget.update()
-                            
-                            # 验证设置是否成功
-                            actual_value = widget.field_value
-                            if actual_value != value:
-                                self.logger.warning(f"字段 '{field_name}' 值被修改: 期望='{value}' (长度:{len(value)}), 实际='{actual_value}' (长度:{len(actual_value)})")
-                                # 尝试使用字节方式重新设置
-                                try:
-                                    widget.field_value = value.encode('utf-8').decode('utf-8')
-                                    widget.update()
-                                    final_value = widget.field_value
-                                    self.logger.debug(f"重新设置后的值: '{final_value}'")
-                                except:
-                                    pass
-                            
-                            filled_count += 1
-                            
-                            # 获取字段的字体信息
-                            font_name = "未知"
-                            font_size = "未知"
+                        if value:  # 只有非空值才填充
                             try:
-                                # 尝试获取字段的字体信息
-                                if hasattr(widget, 'text_font'):
-                                    font_name = widget.text_font or "默认字体"
-                                if hasattr(widget, 'text_fontsize'):
-                                    font_size = f"{widget.text_fontsize}pt" if widget.text_fontsize else "默认大小"
-                                elif hasattr(widget, 'fontsize'):
-                                    font_size = f"{widget.fontsize}pt" if widget.fontsize else "默认大小"
-                            except Exception as font_e:
-                                self.logger.debug(f"获取字段 '{field_name}' 字体信息失败: {font_e}")
-                            
-                            self.logger.debug(f"成功填充字段 '{field_name}': 原始值='{value}', 最终值='{widget.field_value}', 字体='{font_name}', 字体大小='{font_size}'")
-                        except Exception as e:
-                            error_msg = f"填充字段 '{field_name}' 失败: {e}"
-                            self.logger.error(error_msg)
-                            print(error_msg)
+                                if flatten_form:
+                                    # 扁平化表单时只记录，实际填充在后面的扁平化过程中进行
+                                    filled_count += 1
+                                    self.logger.debug(f"准备处理字段 '{field_name}': 值='{value}'")
+                                else:
+                                    # 非扁平化表单：直接填充到表单字段中，支持字体选择
+                                    success = self.fill_form_field_with_font(widget, value)
+                                    if success:
+                                        filled_count += 1
+                                        self.logger.debug(f"成功填充字段 '{field_name}': 值='{value}'")
+                                    else:
+                                        self.logger.warning(f"填充字段 '{field_name}' 失败")
+                            except Exception as e:
+                                self.logger.error(f"填充字段 '{field_name}' 时出错: {e}")
             
             # 确保输出目录存在
             os.makedirs(os.path.dirname(output_pdf_path), exist_ok=True)
@@ -265,14 +349,11 @@ class ExcelToPDFProcessor:
                 # 扁平化表单：优先使用 convert_to_pdf；失败时回退为“栅格化扁平化”（将整页渲染为图片）
                 self.logger.debug("正在扁平化表单...")
                 try:
-                    pdfbytes = doc.convert_to_pdf()  # 这会扁平化所有表单字段
-                    flattened_doc = fitz.open("pdf", pdfbytes)
-                    flattened_doc.save(output_pdf_path, deflate=True, clean=True)
-                    flattened_doc.close()
+                    self.flatten_form_with_textbox(doc, output_pdf_path, data_dict, image_dict)
                     self.logger.debug("表单扁平化完成")
                 except Exception as e:
-                    self.logger.error(f"convert_to_pdf 扁平化失败，启用栅格化备用方案: {e}")
-                    self.log_to_gui("扁平化处理", "warning", f"标准扁平化失败，启用栅格化备用方案: {str(e)[:50]}...")
+                    self.logger.error(f"textbox 扁平化失败，启用栅格化备用方案: {e}")
+                    self.log_to_gui("扁平化处理", "warning", f"textbox扁平化失败，启用栅格化备用方案: {str(e)[:50]}...")
                     # 注意：该方式会生成不可编辑、不可检索的图像PDF，但能彻底避免字体替代错误
                     self.rasterize_flatten_doc(doc, output_pdf_path, dpi=200)
                     self.log_to_gui("扁平化处理", "info", "栅格化扁平化完成（图像PDF，不可编辑）")
@@ -619,7 +700,11 @@ class ExcelToPDFProcessor:
             "col_separator": self.col_separator,
             "flatten_form": self.flatten_form,
             "output_png": self.output_png,
-            "output_ppt": self.output_ppt
+            "output_ppt": self.output_ppt,
+            # 字体配置
+            "font_base_path": self.font_base_path,  # 新增：字体库路径
+            "default_font": self.default_font,
+            "chinese_font": self.chinese_font
         }
         
         try:
@@ -654,6 +739,14 @@ class ExcelToPDFProcessor:
             self.output_png = preset_data.get("output_png", False)
             self.output_ppt = preset_data.get("output_ppt", False)
             
+            # 加载字体配置
+            self.font_base_path = preset_data.get("font_base_path", "resources/fonts")  # 新增：字体库路径
+            self.default_font = preset_data.get("default_font", "calibri")
+            self.chinese_font = preset_data.get("chinese_font", "simhei")
+            
+            # 重新加载字体库
+            self.load_available_fonts()
+            
             success_msg = "预设加载成功"
             self.logger.info(f"预设配置加载成功: {preset_path}")
             self.logger.debug(f"加载的配置: {preset_data}")
@@ -680,6 +773,14 @@ class ExcelToPDFProcessor:
         self.output_png = False
         self.output_ppt = False
         
+        # 重置字体配置
+        self.font_base_path = "resources/fonts"
+        self.default_font = "calibri"
+        self.chinese_font = "simhei"
+        
+        # 重新加载字体库
+        self.load_available_fonts()
+        
         self.logger.info("默认配置恢复完成")
         return "已恢复默认配置"
 
@@ -687,6 +788,149 @@ class ExcelToPDFProcessor:
         """获取桌面路径"""
         return str(Path.home() / "Desktop")
     
+
+
+    def flatten_form_with_textbox(self, doc, output_pdf_path, data_dict, image_dict=None):
+        """使用insert_text方式扁平化表单，参考用户示例代码的简单直接方法"""
+        try:
+            # 创建新文档，复制原文档的页面但不包含表单字段
+            new_doc = fitz.open()
+            
+            for page_num in range(len(doc)):
+                page = doc[page_num]
+                
+                # 创建新页面，复制原页面尺寸
+                new_page = new_doc.new_page(width=page.rect.width, height=page.rect.height)
+                
+                # 复制原页面的内容（不包括表单字段）
+                # 先渲染原页面为图片，然后插入到新页面
+                pix = page.get_pixmap(alpha=False)
+                new_page.insert_image(new_page.rect, pixmap=pix)
+                
+                # 字体嵌入字典，用于存储已嵌入的字体
+                embedded_fonts = {}
+                
+                # 获取原页面的表单字段并在新页面上用insert_text重新绘制
+                widgets = page.widgets()
+                for widget in widgets:
+                    field_name = widget.field_name
+                    
+                    # 处理图片字段
+                    if image_dict and field_name in image_dict:
+                        image_path = image_dict[field_name]
+                        if image_path and os.path.exists(image_path):
+                            try:
+                                # 获取字段的矩形区域
+                                field_rect = widget.rect
+                                # 在新页面插入图片
+                                new_page.insert_image(field_rect, filename=image_path, overlay=True)
+                                self.logger.debug(f"成功在字段 '{field_name}' 位置插入图片")
+                            except Exception as e:
+                                self.logger.error(f"在字段 '{field_name}' 位置插入图片失败: {e}")
+                        continue
+                    
+                    # 处理文本字段
+                    if field_name in data_dict:
+                        value = str(data_dict[field_name])
+                        if value:  # 只有非空值才绘制
+                            # 获取字段的矩形区域
+                            field_rect = widget.rect
+                            
+                            try:
+                                # 根据表单域设置的字体大小作为初始字号（支持'xx pt'）
+                                fontfile = self.get_appropriate_font_path(value, self.default_font, self.chinese_font)
+                                
+                                # 获取原始字体大小，直接使用不进行调整
+                                font_size = self._parse_widget_fontsize(widget, default=22)
+                                color = (0, 0, 0)  # 黑色
+                                
+                                # 详细记录用户字体选择和应用情况
+                                has_chinese = self.has_chinese_characters(value)
+                                selected_font_name = self.chinese_font if has_chinese else self.default_font
+                                
+                                self.logger.info(f"=== 字段 '{field_name}' 字体应用详情 ===")
+                                self.logger.info(f"  填充内容: '{value}' (长度: {len(value)})")
+                                self.logger.info(f"  包含中文: {has_chinese}")
+                                self.logger.info(f"  用户选择的默认字体: {self.default_font}")
+                                self.logger.info(f"  用户选择的中文字体: {self.chinese_font}")
+                                self.logger.info(f"  本次应该使用的字体: {selected_font_name}")
+                                self.logger.info(f"  字体文件路径: {fontfile if fontfile else '未找到字体文件，将使用系统默认字体'}")
+                                self.logger.info(f"  表单域字体大小: {font_size}pt")
+                                
+                                # 嵌入字体并获得fontname
+                                fontname = None
+                                if fontfile and os.path.exists(fontfile):
+                                    # 检查是否已经嵌入过这个字体
+                                    if fontfile not in embedded_fonts:
+                                        try:
+                                            # 先把字体嵌入并得到fontname
+                                            fontname = f"CustomFont_{len(embedded_fonts)}"  # 生成唯一字体名
+                                            xref = new_page.insert_font(fontname=fontname, fontfile=fontfile)
+                                            embedded_fonts[fontfile] = fontname
+                                            self.logger.info(f"  ✓ 字体嵌入成功: {os.path.basename(fontfile)} -> fontname={fontname}")
+                                        except Exception as font_error:
+                                            self.logger.warning(f"  ✗ 字体嵌入失败: {font_error}")
+                                            fontname = None
+                                    else:
+                                        fontname = embedded_fonts[fontfile]
+                                        self.logger.info(f"  ✓ 使用已嵌入字体: {os.path.basename(fontfile)} -> fontname={fontname}")
+                                else:
+                                    self.logger.warning(f"  ✗ 字体文件不存在或路径无效，将使用系统默认字体")
+                                
+                                # 计算垂直居中的Y位置（参考用户示例代码）
+                                text_height = font_size
+                                center_y = (field_rect.y0 + field_rect.y1) / 2
+                                insert_x = field_rect.x0
+                                insert_y = center_y - text_height / 2 + text_height * 0.75
+                                
+                                # 使用insert_text直接插入文本（参考用户示例代码）
+                                new_page.insert_text(
+                                    fitz.Point(insert_x, insert_y),
+                                    value,
+                                    fontname=fontname,
+                                    fontsize=font_size,
+                                    color=color,
+                                )
+                                
+                                self.logger.info(f"  ✓ 文本插入成功: 字号={font_size}pt, 位置=({insert_x:.1f}, {insert_y:.1f})")
+                                self.logger.info(f"  字段矩形: {field_rect}")
+                                self.logger.info(f"=== 字段 '{field_name}' 处理完成 ===")
+                                
+                            except Exception as e:
+                                self.logger.error(f"在字段 '{field_name}' 位置插入文本失败: {e}")
+                                # 备用方案：使用系统默认字体
+                                try:
+                                    font_size = self._parse_widget_fontsize(widget, default=14)
+                                    text_height = font_size
+                                    center_y = (field_rect.y0 + field_rect.y1) / 2
+                                    insert_x = field_rect.x0
+                                    insert_y = center_y - text_height / 2 + text_height * 0.75
+                                    
+                                    self.logger.info(f"  === 启动备用方案（系统默认字体） ===")
+                                    
+                                    new_page.insert_text(
+                                        fitz.Point(insert_x, insert_y),
+                                        value,
+                                        fontname=None,  # 使用系统默认字体
+                                        fontsize=font_size,
+                                        color=(0, 0, 0),
+                                    )
+                                    
+                                    self.logger.info(f"  ✓ 备用方案成功: 字号={font_size}pt")
+                                    self.logger.info(f"=== 字段 '{field_name}' 备用方案完成 ===")
+                                except Exception as e2:
+                                    self.logger.error(f"  ✗ 备用方案也失败: {e2}")
+                                    self.logger.error(f"=== 字段 '{field_name}' 处理失败 ===")
+            
+            # 保存新文档
+            new_doc.save(output_pdf_path, deflate=True, clean=True)
+            new_doc.close()
+            self.logger.debug(f"insert_text扁平化完成: {output_pdf_path}")
+            
+        except Exception as e:
+            self.logger.error(f"insert_text扁平化失败: {e}")
+            raise
+
     def rasterize_flatten_doc(self, doc, output_pdf_path, dpi=200):
         """将PDF以指定DPI栅格化后重新封装为不可编辑的图像PDF，避免字体替代问题"""
         try:

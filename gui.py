@@ -8,6 +8,7 @@ from pathlib import Path
 import threading
 from datetime import datetime
 from core import ExcelToPDFProcessor
+from font_manager import FontManagerWindow
 
 
 class ExcelToPDFGUI:
@@ -16,10 +17,10 @@ class ExcelToPDFGUI:
 
     def __init__(self):
         # 企业环境检测
-        # if not ExcelToPDFGUI._network_checked:
-        #     ExcelToPDFGUI._network_checked = True
-        #     if not self.check_network_connection():
-        #         return
+        if not ExcelToPDFGUI._network_checked:
+            ExcelToPDFGUI._network_checked = True
+            if not self.check_network_connection():
+                return
         # 创建主窗口
         self.root = ThemedTk(theme="arc")
         self.root.title("Excel转PDF模板（套打-电子签）")
@@ -30,6 +31,10 @@ class ExcelToPDFGUI:
         self.processor = ExcelToPDFProcessor()
         # 设置处理器的日志回调
         self.processor.set_gui_log_callback(self.add_operation_log)
+        
+        # 初始化字体相关变量
+        self.default_font_combo = None
+        self.chinese_font_combo = None
         
         # 初始化变量
         self.excel_path_var = tk.StringVar()
@@ -43,6 +48,10 @@ class ExcelToPDFGUI:
         self.output_png_var = tk.BooleanVar(value=False)
         self.output_ppt_var = tk.BooleanVar(value=False)
         
+        # 字体选择相关变量
+        self.default_font_var = tk.StringVar()
+        self.chinese_font_var = tk.StringVar()
+        
         # 字段映射存储
         self.field_mapping_widgets = {}
         self.pdf_fields = []
@@ -52,6 +61,9 @@ class ExcelToPDFGUI:
         self.max_logs = 1000  # 最大日志条数
         
         self.setup_ui()
+        
+        # 初始化字体列表
+        self.refresh_fonts()
         
     def setup_ui(self):
         """设置用户界面"""
@@ -274,9 +286,23 @@ class ExcelToPDFGUI:
         # 添加文件名列的提示
         ttk.Label(config_frame, text="(可选，如A列。不填则使用数字编号)", font=('TkDefaultFont', 8)).grid(row=0, column=8, sticky=tk.W, padx=(5,0), pady=2)
         
-        # 第二行：输出选项（紧凑排列）
+        # 第二行：字体配置
+        font_frame = ttk.Frame(config_frame)
+        font_frame.grid(row=1, column=0, columnspan=9, sticky=(tk.W, tk.E), pady=(8,2))
+        
+        ttk.Button(font_frame, text="字体管理", command=self.open_font_manager).pack(side=tk.LEFT, padx=(0,20))
+        
+        ttk.Label(font_frame, text="默认字体:").pack(side=tk.LEFT)
+        self.default_font_combo = ttk.Combobox(font_frame, textvariable=self.default_font_var, width=15, state="readonly")
+        self.default_font_combo.pack(side=tk.LEFT, padx=(2,10))
+        
+        ttk.Label(font_frame, text="中文字体:").pack(side=tk.LEFT)
+        self.chinese_font_combo = ttk.Combobox(font_frame, textvariable=self.chinese_font_var, width=15, state="readonly")
+        self.chinese_font_combo.pack(side=tk.LEFT, padx=(2,0))
+        
+        # 第三行：输出选项（紧凑排列）
         options_frame = ttk.Frame(config_frame)
-        options_frame.grid(row=1, column=0, columnspan=9, sticky=(tk.W, tk.E), pady=(8,2))
+        options_frame.grid(row=2, column=0, columnspan=9, sticky=(tk.W, tk.E), pady=(8,2))
         
         ttk.Checkbutton(options_frame, text="扁平化表单(将表单转为静态文本)", variable=self.flatten_form_var).pack(side=tk.LEFT)
         ttk.Checkbutton(options_frame, text="输出PNG图片", variable=self.output_png_var).pack(side=tk.LEFT, padx=(20,0))
@@ -472,6 +498,54 @@ class ExcelToPDFGUI:
             messagebox.showinfo("成功", message)
         else:
             self.add_operation_log("恢复默认配置", "warning", "用户取消了恢复默认配置操作")
+    
+    def refresh_fonts(self):
+        """刷新字体列表"""
+        try:
+            # 重新加载字体库
+            self.processor.load_available_fonts()
+            
+            # 获取默认字体和中文字体列表
+            default_fonts = self.processor.get_default_fonts()
+            chinese_fonts = self.processor.get_chinese_fonts()
+            
+            # 更新默认字体下拉框
+            if self.default_font_combo:
+                self.default_font_combo['values'] = default_fonts
+                if default_fonts:
+                    # 尝试找到包含calibri的字体作为默认选择
+                    default_selection = None
+                    for font in default_fonts:
+                        if 'calibri' in font.lower():
+                            default_selection = font
+                            break
+                    if not default_selection:
+                        default_selection = default_fonts[0]
+                    self.default_font_var.set(default_selection)
+            
+            # 更新中文字体下拉框
+            if self.chinese_font_combo:
+                self.chinese_font_combo['values'] = chinese_fonts
+                if chinese_fonts:
+                    # 尝试找到包含simhei的字体作为默认选择
+                    chinese_selection = None
+                    for font in chinese_fonts:
+                        if 'simhei' in font.lower():
+                            chinese_selection = font
+                            break
+                    if not chinese_selection:
+                        chinese_selection = chinese_fonts[0]
+                    self.chinese_font_var.set(chinese_selection)
+            
+            total_fonts = len(default_fonts) + len(chinese_fonts)
+            self.add_operation_log("刷新字体", "success", f"已加载 {total_fonts} 个字体文件 (默认:{len(default_fonts)}, 中文:{len(chinese_fonts)})")
+            
+        except Exception as e:
+            self.add_operation_log("刷新字体", "error", f"刷新字体失败: {str(e)}")
+    
+    def open_font_manager(self):
+        """打开字体管理窗口"""
+        FontManagerWindow(self.root, self.processor, self.refresh_fonts, self.add_operation_log)
             
     def load_pdf_fields(self):
         """加载PDF表单字段"""
@@ -609,6 +683,10 @@ class ExcelToPDFGUI:
         self.output_png_var.set(self.processor.output_png)
         self.output_ppt_var.set(self.processor.output_ppt)
         
+        # 更新字体配置
+        self.default_font_var.set(getattr(self.processor, 'default_font', ''))
+        self.chinese_font_var.set(getattr(self.processor, 'chinese_font', ''))
+        
         # 如果有字段映射，尝试加载PDF字段并设置映射
         if self.processor.field_mapping and self.processor.pdf_template_path:
             try:
@@ -649,6 +727,10 @@ class ExcelToPDFGUI:
         self.processor.flatten_form = self.flatten_form_var.get()
         self.processor.output_png = self.output_png_var.get()
         self.processor.output_ppt = self.output_ppt_var.get()
+        
+        # 更新字体配置
+        self.processor.default_font = self.default_font_var.get().strip()
+        self.processor.chinese_font = self.chinese_font_var.get().strip()
         
         # 更新字段映射
         self.processor.field_mapping = {}

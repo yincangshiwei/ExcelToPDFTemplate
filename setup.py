@@ -29,7 +29,7 @@ bdist_msi_options = {
 
 setup(
     name="ExcelToPDFTemplate",
-    version="1.0",
+    version="3.0",
     description="Excel转PDF模板（套打-电子签）",
     options={
         'build_exe': build_exe_options,
